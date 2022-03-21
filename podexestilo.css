@@ -1,0 +1,466 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+
+    height: 70px;
+    background-color: rgb(214, 6, 6);
+    font-weight: 700;
+    z-index: 3;
+    padding: 0px 0px;
+}
+
+nav h1 {
+    color: whitesmoke;
+    font-size: 2rem;
+}
+
+body {
+    background-image: url(./recursos/fondo.jpg);
+    background-size: 2000px;
+}
+
+.pokedexTop {
+    position: relative;
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(214, 6, 6);
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+
+
+    position: relative;
+    top: 100px;
+    left: 25%;
+    padding-top: 20px ;
+    padding-bottom: 20px;
+
+    border-width: 2px;
+    border-style: solid;
+}
+
+.pantalla  {
+    position: absolute;
+    width:600px;
+    height: 350px;
+    background-color: #7faabe;
+    left: 50%;
+    top:30px;
+    transform:translate(-50%,0);
+    border-width: 25px 25px 20px 25px;
+    border-style: solid;
+    border-color: #D7D5D6;
+    border-radius:15px 15px 15px 15px;
+
+    display: grid;
+    grid-template-areas: 
+    'name name name name'
+    'blank blank blank id'
+    'blank blank blank Type'
+    'blank blank blank Type2'
+    'blank blank blank Height'
+    'blank blank blank Weight'
+    'blank blank blank Habitat';
+
+  
+    grid-template-columns: 1fr 1fr 1fr 90px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+
+  
+}
+
+.pantalla div{
+    border: 3px solid rgba(18, 35, 43, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+#nomPokemon {
+    grid-area: name;
+    font-size: medium;
+    margin: 2px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#tipo{
+    grid-area: Type;
+
+    width: 60px;
+    height: 20px;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    margin-left: 12px;
+    font-size: 0.8rem;
+}
+
+#tipo2{
+    grid-area: Type2;
+
+    width: 60px;
+    height: 20px;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-size: 0.8rem;
+    margin-left: 12px;
+}
+#id{ 
+    grid-area: id;
+    height: 25px;
+    margin: 2px;
+    font-size: 0.8rem;
+    background-color: rgba(00, 00, 00, .3);
+}
+
+#peso {
+    grid-area: Weight;
+    display: flex;
+    justify-content: flex-start;
+  
+    background-color: rgba(00, 00, 00, .3);
+}
+
+#altura{
+    grid-area: Height;
+    display: flex;
+    justify-content: flex-start;
+
+    background-color: rgba(00, 00, 00, .3);
+}
+
+
+
+.espacioFotos{
+    grid-area: blank;
+    position: relative;
+}
+
+
+
+.foto{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top:17px;   left: 20px;
+
+}
+
+.espacioFotos .pokeApodo{
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    max-width: 220px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.espacioFotos .pokeEntrada{
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    max-width: 220px;
+    font-weight: 400;
+}
+
+
+
+
+.pokedexB {
+    position: relative;
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(214, 6, 6);
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius:  35%;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    border-width: 2px;
+    border-style: solid;
+
+    
+    position: relative;
+    top: 110px;
+    left: 25%;
+    padding-top: 20px ;
+    padding-bottom: 50px;
+}
+
+.pantallaB{
+    width: 600px;
+    height: 300px;
+    position: relative;
+    background-color: #96D9A5;
+ 
+    border: 3px solid rgba(00, 00, 00, .6);
+    border-radius: 7px;
+    
+    border-width: 15px 15px 15px 15px;
+    font-size: 8px;
+    padding: 20px;
+    padding-top: 0px;
+    color: rgba(00, 00, 00, .7);
+}
+
+.pantallaB .estadistica{
+    position: absolute;
+    left: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    top: 20px;
+}
+
+.pantallaB .habitext{
+    position: absolute;
+    left: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    top: 150px;
+}
+
+.pantallaB .habili{
+    font-size: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    font-weight: 500;
+}
+
+.entrada {
+    position: relative;
+    top: 20px;
+    height: 50px;
+    width: 150px;
+    background-color: rgba(127, 170, 190, 50);
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    
+}
+
+.boton{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+
+    position: relative;
+    top: 20px;
+    background-color: #D7D5D6;
+}
+
+.stats{
+    display: grid;
+    width: 50%;
+    height: 80px;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    position: absolute;
+    top: 60px;
+    left:50%;
+   
+}
+.stats .b{
+
+    display: grid;
+
+    width: 80%;
+
+    
+    background-color: transparent;
+    border: 2px solid rgba(00, 00, 00, .7);
+    margin: 0px;
+
+    position: relative;
+    
+    
+}
+.stats .b div:first-child{
+    
+    width: 100%;
+    background-color:#96D9A5;
+    
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    
+}
+.stats .b div:nth-child(2){
+    
+    width: 100%;
+    background-color: rgba(50, 48, 48, .9);
+
+    display: flex;
+    justify-content: center;
+
+    position: relative; 
+}
+
+
+
+/*Decoracion*/
+.imgDeco{
+    max-width: 200px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    
+}
+
+.cruz{
+    width: 100 px; 
+    height: 100px;
+    position: absolute;
+    left: 10px;
+    padding-left: 20px;
+}
+
+.cruz .part1{
+    width: 30px;
+    height: 120px;
+    background-color: #323031;
+    border: 3px solid rgba(00, 00, 00, .4);
+    position: absolute;
+    left: 65px;
+    bottom: 20px;
+}
+
+
+.cruz .part2{
+    width: 120px;
+    height: 30px;
+    background-color: #323031;
+    
+    position: absolute;
+    left: 20px;
+}
+
+.botones{
+    width: 100 px; 
+    height: 150px;
+    position: absolute;
+    right: 10px;
+    
+}
+
+.botones .x{
+    width: 40px;
+    height: 40px;
+    background-color: #323031;
+
+    position: absolute;
+    right:50px;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.botones .x p{
+  font-size: 2rem;
+  position: absolute;
+  left: 12px;
+  bottom: 5px;
+}
+
+.botones .b{
+    width: 40px;
+    height: 40px;
+    background-color: #323031;
+
+    position: absolute;
+    right:50px;
+    top: 75px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.botones .b p{
+  font-size: 2rem;
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+}
+
+.botones .a{
+    width: 40px;
+    height: 40px;
+    background-color: #323031;
+
+    position: absolute;
+    right:0px;
+    top: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.botones .a p{
+  font-size: 2rem;
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+}
+
+.botones .Y{
+    width: 40px;
+    height: 40px;
+    background-color: #323031;
+
+    position: absolute;
+    right: 100px;
+    top: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.botones .Y p{
+  font-size: 2rem;
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+}

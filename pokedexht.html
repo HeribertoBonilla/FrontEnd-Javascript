@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokedex</title>
+    
+        <!-- CSS-->
+        <link rel="stylesheet" href="./podexestilo.css">
+    
+        <!---->
+
+    </head>
+    
+    <body>
+        <header >
+            <nav>
+                <h1>Pokedex</h1>
+            </nav>
+                   
+        </header>
+
+        <main>
+            
+            <section class="pokedexTop">
+                <div class="pantalla">
+                    <div id="nomPokemon">
+                        <span>  </span>                   
+                    </div>
+
+                    <div id="tipo">
+                        <span>
+                           
+                        </span>
+                    </div>
+
+                    <div id="tipo2">
+                        <span>
+                           
+                        </span>
+                    </div>
+                    <div id="id">
+                        <span>
+                            
+                        </span>
+                    </div>
+
+                    <div id="altura">
+                        <span></span>
+                    </div>
+
+                    <div id="peso">
+                        <span></span>
+                    </div>
+                    
+                   
+
+                    <div class="espacioFotos">
+                        <div id="pokeApodo" class="pokeApodo">
+
+                        </div>
+
+                        <div id="pokeEntrada" class="pokeEntrada"></div>
+                        <div class="foto">
+                            
+                            <img src="recursos\pokeball8bit.png" width=100% alt="" id="pokeImg">
+                         </div>
+                    </div>
+                    
+                </div>
+
+                       
+
+            </section>
+
+            <section class="pokedexB">
+                <div class="cruz">
+                    <div class="part1"></div>
+                    <div class="part2"></div>
+                </div>
+                <div class="pantallaB">
+
+                
+                    <input type="button" value="Buscar" onclick="fetchPokemon()" class="boton" id="boton" >
+                    <input type="text" name="pokeName" id="pokeName" class="entrada" onkeypress="" placeholder="Nombre del pokemon" >
+                    <img src="recursos\logo.png" class="imgDeco" width="100%" alt="">
+                    <p class="estadistica">Estadisticas</p>
+                    <div class="stats" id="stats">  <p></p>     </div>
+                    <p class="habitext">Habilidades</p>
+                    <div id="habilidades" class="habili"><span></span></div>
+                </div>
+                
+                <div class="botones">
+                    <div class="x"><p>x</p></div>
+                    <div class="b"><p>B</p></div>
+                    <div class="a"><p>A</p></div>
+                    <div class="Y"><p>Y</p></div>
+                </div>
+               
+
+                
+
+            </section>
+
+        </main>
+
+        <footer>
+            <script src="./pokedexjs.js"></script>
+           
+        </footer>
+    </body>
+
+
+</html>
